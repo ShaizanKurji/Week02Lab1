@@ -45,11 +45,12 @@ public class AgeCalculatorServlet extends HttpServlet {
             throws ServletException, IOException {
         String message = ""; 
          
-        try{ 
-       int ageInput = Integer.parseInt(request.getParameter("ageinput"));
+        try{  
+      int ageInput = Integer.parseInt(request.getParameter("ageinput"));
         ageInput += 1; 
         message ="Your age next birthday will be: " +ageInput; 
         } catch(NumberFormatException nfe ){
+            
              message ="You must give your current age"; 
         }
         
